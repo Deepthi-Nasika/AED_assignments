@@ -454,6 +454,50 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        
+        if(txtFirstName.getText().trim().isEmpty() || txtLastName.getText().trim().isEmpty() || txtAge.getText().trim().isEmpty() || txtGender.getText().trim().isEmpty() || txtSSN.getText().trim().isEmpty() || txtLicenseNum.getText().trim().isEmpty()
+                || txtHomeStreetAdr.getText().trim().isEmpty() || txtHomeUnitNum.getText().trim().isEmpty() || txtHomeCity.getText().trim().isEmpty() || txtHomeState.getText().trim().isEmpty() || txtHomeZipCode.getText().trim().isEmpty()
+                || txtWorkStreetAdr.getText().trim().isEmpty() || txtWorkUnitNum.getText().trim().isEmpty() || txtWorkCity.getText().trim().isEmpty() || txtWorkState.getText().trim().isEmpty() || txtWorkZipCode.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Fields cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Validate first name does not contain integers
+        if (txtFirstName.getText().matches(".*\\d.*")) {
+            JOptionPane.showMessageDialog(null, "Enter valid first name", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
+        // Validate last name does not contain integers
+        if (txtLastName.getText().matches(".*\\d.*")) {
+            JOptionPane.showMessageDialog(null, "Enter valid last name", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
+        // Validate home zipcode number has 5 digits only
+        if (!txtHomeZipCode.getText().matches("\\d{5}")){
+            JOptionPane.showMessageDialog(null, "Enter valid 5-digit home zipcode", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
+        // Validate work zipcode number has 5 digits only
+        if (!txtWorkZipCode.getText().matches("\\d{5}")){
+            JOptionPane.showMessageDialog(null, "Enter valid 5-digit work zipcode", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
+        // Validate ssn has 9 digits only
+        if (!txtSSN.getText().matches("\\d{9}")){
+            JOptionPane.showMessageDialog(null, "Enter valid 9-digit ssn", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
+        // Validate license number has 9 digits only
+        if (!txtLicenseNum.getText().matches("\\d{9}")){
+            JOptionPane.showMessageDialog(null, "Enter valid 9-digit license number", "Error", JOptionPane.ERROR_MESSAGE);
+            return; 
+        }
+        
         person.setFirstName(txtFirstName.getText());
         person.setLastName(txtLastName.getText());
         person.setGender(txtGender.getText());
