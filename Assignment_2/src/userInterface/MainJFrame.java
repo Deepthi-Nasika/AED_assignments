@@ -1,0 +1,344 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package userInterface;
+
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import personProfile.Address;
+import personProfile.PersonDirectory;
+import personProfile.Person;
+
+/**
+ *
+ * @author nasik
+ */
+
+public class MainJFrame extends javax.swing.JFrame {
+
+    private PersonDirectory personDirectory;
+    /**
+     * Creates new form MainJFrame
+     */
+    public MainJFrame() {
+        initComponents();
+        this.personDirectory = new PersonDirectory();
+        populateDirectory();
+    }
+    
+    public void populateDirectory(){
+        
+        Person p1 = personDirectory.addPerson();
+        p1.setFirstName("Rishi");
+        p1.setLastName("Mehra");
+        p1.setGender("Male");
+        p1.setAge(29);
+        p1.setSsn("897876755");
+        p1.setLicense_number("293809281");
+        Address homeadr1 = new Address();
+        homeadr1.setStreetAdr("Smith Street");
+        homeadr1.setUnitNum("7C");
+        homeadr1.setCity("Boston");
+        homeadr1.setState("MA");
+        homeadr1.setZipCode("02120"); 
+        p1.setHomeadr(homeadr1);
+        Address workadr1 = new Address();
+        workadr1.setStreetAdr("Parker Street");
+        workadr1.setUnitNum("615");
+        workadr1.setCity("Boston");
+        workadr1.setState("MA");
+        workadr1.setZipCode("23200");
+        p1.setWorkadr(workadr1);
+        
+        Person p2 = personDirectory.addPerson();
+        p2.setFirstName("FNU");
+        p2.setLastName("Meaha");
+        p2.setGender("Female");
+        p2.setAge(32);
+        p2.setSsn("812019095");
+        p2.setLicense_number("090909281");
+        Address homeadr2 = new Address();
+        homeadr2.setStreetAdr("MS Nagar");
+        homeadr2.setUnitNum("21");
+        homeadr2.setCity("Hyderabad");
+        homeadr2.setState("Telangana");
+        homeadr2.setZipCode("19028"); 
+        p2.setHomeadr(homeadr2);
+        Address workadr2 = new Address();
+        workadr2.setStreetAdr("Mythri St");
+        workadr2.setUnitNum("203");
+        workadr2.setCity("Mumbai");
+        workadr2.setState("MA");
+        workadr2.setZipCode("32900");
+        p2.setWorkadr(workadr2);
+        
+        Person p3 = personDirectory.addPerson();
+        p3.setFirstName("Yash");
+        p3.setLastName("Badani");
+        p3.setGender("Male");
+        p3.setAge(56);
+        p3.setSsn("349870991");
+        p3.setLicense_number("372098021");
+        Address homeadr3 = new Address();
+        homeadr3.setStreetAdr("Bandra");
+        homeadr3.setUnitNum("21");
+        homeadr3.setCity("Goa");
+        homeadr3.setState("Goa");
+        homeadr3.setZipCode("23298"); 
+        p3.setHomeadr(homeadr3);
+        Address workadr3 = new Address();
+        workadr3.setStreetAdr("Snell");
+        workadr3.setUnitNum("29");
+        workadr3.setCity("Boston");
+        workadr3.setState("MA");
+        workadr3.setZipCode("98729");
+        p3.setWorkadr(workadr3);
+        
+        Person p4 = personDirectory.addPerson();
+        p4.setFirstName("Sandeep");
+        p4.setLastName("Kumar");
+        p4.setGender("Male");
+        p4.setAge(25);
+        p4.setSsn("368716898");
+        p4.setLicense_number("3654786898");
+        Address homeadr4 = new Address();
+        homeadr4.setStreetAdr("mothinagar");
+        homeadr4.setUnitNum("81A");
+        homeadr4.setCity("Chennai");
+        homeadr4.setState("Tamilnadu");
+        homeadr4.setZipCode("87398"); 
+        p4.setHomeadr(homeadr4);
+        Address workadr4 = new Address();
+        workadr4.setStreetAdr("lalaguda");
+        workadr4.setUnitNum("203");
+        workadr4.setCity("Kochi");
+        workadr4.setState("Kerala");
+        workadr4.setZipCode("32709");
+        p4.setWorkadr(workadr4);
+        
+        Person p5 = personDirectory.addPerson();
+        p5.setFirstName("Mithra");
+        p5.setLastName("Vardhan");
+        p5.setGender("Male");
+        p5.setAge(22);
+        p5.setSsn("874929080");
+        p5.setLicense_number("190809830");
+        Address homeadr5 = new Address();
+        homeadr5.setStreetAdr("MS Nagar");
+        homeadr5.setUnitNum("109");
+        homeadr5.setCity("Hyderabad");
+        homeadr5.setState("Telangana");
+        homeadr5.setZipCode("19028"); 
+        p5.setHomeadr(homeadr5);
+        Address workadr5 = new Address();
+        workadr5.setStreetAdr("Mythri St");
+        workadr5.setUnitNum("203");
+        workadr5.setCity("Mumbai");
+        workadr5.setState("MA");
+        workadr5.setZipCode("32900");
+        p5.setWorkadr(workadr5);
+        
+    }
+   
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jSplitPane1 = new javax.swing.JSplitPane();
+        topJPanel = new javax.swing.JPanel();
+        btnCreatePerson = new javax.swing.JButton();
+        btnListPerson = new javax.swing.JButton();
+        txtSearch = new javax.swing.JTextField();
+        btnSearch = new javax.swing.JButton();
+        lblPersonProfile = new javax.swing.JLabel();
+        userProcessContainer = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jSplitPane1.setToolTipText("");
+        jSplitPane1.setPreferredSize(new java.awt.Dimension(900, 600));
+
+        topJPanel.setBackground(new java.awt.Color(255, 204, 255));
+        topJPanel.setPreferredSize(new java.awt.Dimension(900, 600));
+
+        btnCreatePerson.setText("Create Person");
+        btnCreatePerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatePersonActionPerformed(evt);
+            }
+        });
+
+        btnListPerson.setText("List Persons");
+        btnListPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListPersonActionPerformed(evt);
+            }
+        });
+
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
+
+        btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+
+        lblPersonProfile.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        lblPersonProfile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPersonProfile.setText("Person Profile");
+
+        javax.swing.GroupLayout topJPanelLayout = new javax.swing.GroupLayout(topJPanel);
+        topJPanel.setLayout(topJPanelLayout);
+        topJPanelLayout.setHorizontalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(topJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(topJPanelLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCreatePerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnListPerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPersonProfile, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        topJPanelLayout.setVerticalGroup(
+            topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(topJPanelLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(lblPersonProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(btnCreatePerson, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnListPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(220, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setTopComponent(topJPanel);
+
+        userProcessContainer.setBackground(new java.awt.Color(255, 255, 204));
+        userProcessContainer.setLayout(new java.awt.CardLayout());
+        jSplitPane1.setRightComponent(userProcessContainer);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonActionPerformed
+        // TODO add your handling code here:
+        CreatePersonJPanel panel = new CreatePersonJPanel(userProcessContainer, personDirectory);
+        userProcessContainer.add("CreatePersonJPanel", panel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnCreatePersonActionPerformed
+
+    private void btnListPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListPersonActionPerformed
+        // TODO add your handling code here:
+        ListPersonJPanel panel = new ListPersonJPanel(userProcessContainer, personDirectory);
+        userProcessContainer.add("ListPersonJPanel", panel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnListPersonActionPerformed
+
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+        // TODO add your handling code here:
+        Person result = personDirectory.searchPerson(txtSearch.getText());
+        if(result == null){
+            JOptionPane.showMessageDialog(null, "Enter valid name or valid street address", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer, result);
+            userProcessContainer.add("ViewPersonJPanel", panel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+
+    }//GEN-LAST:event_txtSearchActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        Person result = personDirectory.searchPerson(txtSearch.getText());
+        if(result == null){
+            JOptionPane.showMessageDialog(null, "Person with those details does not exist", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            ViewPersonJPanel panel = new ViewPersonJPanel(userProcessContainer, result);
+            userProcessContainer.add("ViewPersonJPanel", panel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainJFrame().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCreatePerson;
+    private javax.swing.JButton btnListPerson;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel lblPersonProfile;
+    private javax.swing.JPanel topJPanel;
+    private javax.swing.JTextField txtSearch;
+    private javax.swing.JPanel userProcessContainer;
+    // End of variables declaration//GEN-END:variables
+}
